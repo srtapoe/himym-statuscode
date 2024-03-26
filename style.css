@@ -1,0 +1,73 @@
+:root {
+    --yellow-tracy: #f2f041;
+    --ted-black:  #1d1c1b;
+    --robin-blue: #96c5e7;
+}
+
+@font-face {
+    font-family: 'FF Dax Regular';
+    src: url('/caminho/para/Dax-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FF Dax Bold';
+    src: url('/caminho/para/Dax-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'FF Dax Regular', sans-serif;
+    background-color: var(--yellow-tracy);
+    color: var(--ted-black);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'FF Dax Bold', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 60px;
+    color: var(--ted-black);
+}
+
+h1:hover {
+    color: var(--robin-blue);
+}
+
+.himym-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.himym {
+    margin: 40px;
+    position: relative;
+    width: 400px;
+    text-align: center; /* Adicionado para centralizar o texto */
+}
+
+.himym img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.status {
+    position: absolute;
+    bottom: -35px; /* Ajustado para garantir que fique abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: var(--yellow-tracy);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.himym:hover .status {
+    display: block;
+}
